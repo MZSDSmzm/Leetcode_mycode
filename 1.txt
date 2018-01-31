@@ -1,3 +1,25 @@
+1. Two Sum
+
+Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+Example:
+
+Given nums = [2, 7, 11, 15], target = 9,
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
+
+题目大意：
+
+    给你一个整型数组nums和一个整数target，要求你在这个数组中找到两个整数，使得它们的和正好与target相等，最后返回这两个整数的数组下标。
+
+算法思路：
+
+    从头开始遍历数组（两个循环），找到符合要求的两个整数就结束，返回它们的下标组成的数组。
+
+Java:
+
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         int []num = new int[2];
@@ -6,6 +28,7 @@ class Solution {
                 if((nums[i] + nums[j])==target){
                     num[0] = i;
                     num[1] = j;
+                    return num;
                 }
             }
         }
