@@ -1,0 +1,8 @@
+9. Palindrome Number
+
+Determine whether an integer is a palindrome. Do this without extra space.
+
+题目大意：
+      
+        判断一个整数是否是一个回文数，要求不要使用额外的空间。
+
