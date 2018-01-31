@@ -18,7 +18,7 @@ return [0, 1].
 
     从头开始遍历数组（两个循环），找到符合要求的两个整数就结束，返回它们的下标组成的数组。
 
-Java:
+Java答案:
 
 class Solution {
     public int[] twoSum(int[] nums, int target) {
