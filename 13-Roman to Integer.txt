@@ -6,7 +6,7 @@ Input is guaranteed to be within the range from 1 to 3999.
 
 题目大意：
 
-		给定一个罗马数字，将其转换为整数。
+	给定一个罗马数字，将其转换为整数。
 		
 C++答案:
 
