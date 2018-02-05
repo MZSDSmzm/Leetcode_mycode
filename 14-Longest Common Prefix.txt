@@ -1,0 +1,34 @@
+14. Longest Common Prefix
+
+Write a function to find the longest common prefix string amongst an array of strings.
+
+题目大意：
+	
+	编写一个函数来查找字符串数组中最长的公共前缀字符串。
+
+C++答案：
+class Solution {
+public:
+    string longestCommonPrefix(vector<string>& strs) {
+        bool flag = true;
+        string str = "";
+        if(strs.size() == 1){
+            return strs[0];
+        }
+       if(strs.size() != 0)
+            for(int j = 0;flag;j++){
+                for(int i = 0;i <= strs.size() - 2;i++){
+                    if(strs[i][j] != strs[i + 1][j] || strs[i] == ""){
+                        flag = false;
+                        break;
+                    }
+                    
+                }
+                if(flag)
+                str += strs[0][j];
+            }
+        
+        
+        return str;
+    }
+};
