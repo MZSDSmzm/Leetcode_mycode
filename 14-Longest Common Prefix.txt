@@ -26,9 +26,7 @@ public:
                 }
                 if(flag)
                 str += strs[0][j];
-            }
-        
-        
+            }              
         return str;
     }
 };
