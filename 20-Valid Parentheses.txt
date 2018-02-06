@@ -5,11 +5,11 @@ The brackets must close in the correct order, "()" and "()[]{}" are all valid bu
 
 题目大意：
 
-		判断(),{}和[]是否正常匹配。
+	判断(),{}和[]是否正常匹配。
 		
 题目算法：
 
-		将表达式依次放入一个栈中，当入栈是遇到和它匹配的符合，栈顶元素出栈，最后栈为空说明正常匹配。
+	将表达式依次放入一个栈中，当入栈是遇到和它匹配的符合，栈顶元素出栈，最后栈为空说明正常匹配。
 	
 	
 C++答案：
@@ -19,20 +19,17 @@ public:
    bool isValid(string s) {
         stack<char> str;
         for(int i = 0;i < s.length();i++){
-            //cout << s[i] << endl;
             switch(s[i]){
                 case '{':
                 case '[':
                 case '(':
                     str.push(s[i]);
-                    //cout << str.size();
                     break;
                 case ')': if (str.empty() || str.top()!='(') return false; else str.pop(); break;
                 case '}': if (str.empty() || str.top()!='{') return false; else str.pop(); break;
                 case ']': if (str.empty() || str.top()!='[') return false; else str.pop(); break;
             }
         }
-
         return str.empty();
     }
 };
