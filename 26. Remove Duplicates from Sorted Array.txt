@@ -1,0 +1,45 @@
+26. Remove Duplicates from Sorted Array
+
+
+Given a sorted array, remove the duplicates in-place such that each element appear only once and return the new length.
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+
+
+Example:
+
+Given nums = [1,1,2],
+Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
+It doesn't matter what you leave beyond the new length.
+
+题目大意：
+	
+	给定一个有序数组，删除重复内容，使每个元素只出现一次，并返回新的长度。
+
+	要求不要使用额外的数组,即空间复杂度为O(1),来实现这一点。
+
+题目算法：
+
+	因为是有序数组，所以重复的数字相邻，我们通过遍历数组，并比较相邻（下一个数组）的值是否相等来判断，
+
+	如果当前数字与其下一个数字不等（小于），将下一个数字追加到当前不重复数组后边，最后返回不重复的数组长度。
+
+Java答案：
+
+class Solution {
+    public int removeDuplicates(int[] nums) {
+       	if (nums.length > 0) {
+			int result = 1;
+			int sign = nums[0];
+			for (int j = 0; j < nums.length; j++) {
+				if (nums[j] > sign) {
+					nums[result] = nums[j];
+					sign = nums[result];
+					result++;
+				}
+			}
+            return result;
+		}else{
+            return (0);
+		}
+    }
+}
