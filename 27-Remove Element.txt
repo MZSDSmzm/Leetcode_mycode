@@ -8,15 +8,15 @@ Example:
 Given nums = [3,2,2,3], val = 3,
 Your function should return length = 2, with the first two elements of nums being 2.
 
-��Ŀ���⣺
+题目大意：
 
-	����һ�������һ��ֵ��ɾ����ֵ������ʵ���������µĳ��ȡ���ҪΪ��������������Ŀռ䣬Ԫ�ص�˳����Ըı䡣
+	给定一个数组和一个值，删除该值的所有实例并返回新的长度。不要为其他数组分配额外的空间，元素的顺序可以改变。
 
-��Ŀ�㷨��
+题目算法：
 
-	������Ŀ26��
+	类似题目26，将符合条件的值放在数组的前边。
 	
-Java�𰸣�
+Java答案：
 
 class Solution {
     public int removeElement(int[] nums, int val) {
