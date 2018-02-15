@@ -1,3 +1,27 @@
+28. Implement strStr()
+
+Implement strStr().
+Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+
+Example 1:
+Input: haystack = "hello", needle = "ll"
+Output: 2
+
+Example 2:
+Input: haystack = "aaaaa", needle = "bba"
+Output: -1
+
+
+题目大意：
+
+	判断字符串是否包含子串，包含返回位置，否则返回-1。
+	
+题目算法：
+
+	可以使用语言自带的方法，也可以使用循环判断，后者较慢，这里使用的是前者。
+
+	
+Java答案：
 class Solution {
     public int strStr(String haystack, String needle) {   
         if(needle.isEmpty()){
@@ -8,8 +32,8 @@ class Solution {
     }
 }
 	
-	
-	class Solution {
+C++答案：
+class Solution {
 public:
     int strStr(string haystack, string needle) {
         if(needle.length() == 0){
