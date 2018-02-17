@@ -26,3 +26,24 @@ Output: 0
         给定一个有序数组和目标值，如果找到目标，则返回索引。如果没有，按顺序插入后返回索引。
 
 题目算法：
+	
+		属于查找比较问题，比较简单。最简单的方法是将数组遍历比较，遍历方法可以优化，这里使用的是最简单的遍历方法。
+		
+Java答案：
+
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        for(int i = 0;i < nums.length;i++){
+            if(nums[i] >= target){
+                return i;
+            }
+            if(i == nums.length - 1){
+                return nums.length;
+            }
+        }
+        /**if(nums.length == 0){
+            return 0;   
+        }**/
+        return 0;   
+    }
+}		
