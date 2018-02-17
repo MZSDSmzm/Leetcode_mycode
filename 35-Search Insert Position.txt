@@ -27,7 +27,7 @@ Output: 0
 
 题目算法：
 	
-		属于查找比较问题，比较简单。最简单的方法是将数组遍历比较，遍历方法可以优化，这里使用的是最简单的遍历方法。
+	属于查找比较问题，比较简单。最简单的方法是将数组遍历比较，遍历方法可以优化，这里使用的是最简单的遍历方法。
 		
 Java答案：
 
@@ -37,13 +37,14 @@ class Solution {
             if(nums[i] >= target){
                 return i;
             }
-            if(i == nums.length - 1){
-                return nums.length;
-            }
         }
-        /**if(nums.length == 0){
+        if(target > nums[nums.length - 1]){
+                return nums.length;
+        }
+	//可以省略
+        /**if(nums.length == 0){
             return 0;   
         }**/
         return 0;   
     }
-}		
+}	
