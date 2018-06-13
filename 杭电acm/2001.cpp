@@ -6,11 +6,11 @@ int main(){
 	double x1, y1, x2, y2;
 	double distance = 0;
 	while (std::cin >> x1 >> y1 >> x2 >> y2){
-		//¿ª·½sqrt£¬´Î·½pow
+		//å¼€æ–¹sqrtï¼Œæ¬¡æ–¹pow
 		distance = sqrt(pow(x1 - x2,2) + pow(y1 - y2,2));
-		//±£ÁôĞ¡ÊıµãºóÁ½Î»
+		//ä¿ç•™å°æ•°ç‚¹åä¸¤ä½ï¼Œå»é™¤std::setiosflags(std::ios::fixed)å4.12ä¼šå˜ä¸º4.1
+		//Cè¯­è¨€ï¼Œprintf("%.2lf\n",distance);  #include <stdio.h>
 		std::cout << std::setiosflags(std::ios::fixed) << std::setprecision(2) << distance << std::endl;
-		//CÓïÑÔ£¬printf("%.2lf\n",distance);  #include <stdio.h>
 	}	
 	system("pause");
 	return 0;
