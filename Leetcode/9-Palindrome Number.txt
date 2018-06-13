@@ -1,0 +1,33 @@
+9. Palindrome Number
+
+Determine whether an integer is a palindrome. Do this without extra space.
+
+题目大意：
+      
+    判断一个整数是否是一个回文数，要求不要使用额外的空间。
+
+算法思路：
+
+    类似于第7个题目，先得到它的倒叙数，判断两者是否相等，相等则是回文数，反之不是。
+
+C++答案：
+
+class Solution {
+public:
+    bool isPalindrome(int x) {       
+        int xx = x;            
+        int y = 0;
+         if(x < 0){
+            return false;
+        }
+        while(xx > 0){
+            y = y * 10 + xx % 10;
+            xx /= 10;
+        }    
+        if(y == x){
+            return true;
+        }else{
+            return false;
+        }
+    }
+};
