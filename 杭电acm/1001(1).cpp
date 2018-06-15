@@ -1,7 +1,7 @@
 #include<iostream> 
 
 int main(){
-	//Ê¹ÓÃ¹«Ê½Ê±×¢ÒâÊý¾ÝÒç³öÎÊÌâ
+	//ä½¿ç”¨å…¬å¼æ—¶æ³¨æ„æ•°æ®æº¢å‡º
 	long long n;
 	while (std::cin >> n){
 		std::cout << (n + 1) * n / 2 << std::endl << std::endl;
